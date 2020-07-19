@@ -21,12 +21,13 @@ public class LoginFilter implements Filter{
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
+
 		HttpSession session = ((HttpServletRequest) request).getSession();
 		Login account = (Login) session.getAttribute("account");
 		System.out.println("firuta- ");
 		System.out.println(account);if (account==null) {
 			System.out.println("ko");
-			((HttpServletResponse) response).sendRedirect("/MashRoomDB");
+			((HttpServletResponse) response).sendRedirect(((HttpServletRequest) request).getContextPath()+"/MashRoomDB");
 		}
 		chain.doFilter(request, response);
 

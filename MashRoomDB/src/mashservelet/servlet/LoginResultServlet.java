@@ -29,9 +29,9 @@ public class LoginResultServlet extends HttpServlet{
 		System.out.println(account);
 		System.out.println(session.getId());
 		if (login==null) {
-			response.sendRedirect("/");
+			response.sendRedirect(request.getContextPath()+"/");
 		}else {
-			response.sendRedirect("/Login/SelectMash");
+			response.sendRedirect(request.getContextPath()+"/Login/SelectMash");
 
 		}
 

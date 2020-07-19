@@ -32,14 +32,14 @@ List<Volva> volist = (List<Volva>) application.getAttribute("volist");
 
 <body>
 <link rel ="stylesheet" href ="InsertStyle.css">
-<jsp:include page="/InsertHeaders.jsp" />
+<jsp:include page="/WEB-INF/InsertHeaders.jsp" />
 
 
 <section class="class">
 <h1>きのこ を登録します。</h1>
 <h2>きのこ の特徴を入力してください。</h2>
 </section>
-<form action="/Login/admin/InsertMash" method="post">
+<form action="<%=request.getContextPath() %>/Login/admin/InsertMash" method="post">
 名前:<input type="text" name="name"><br>
 目:<select name="order">
 <% for (int i=0;i<orlist.size();i++){%>

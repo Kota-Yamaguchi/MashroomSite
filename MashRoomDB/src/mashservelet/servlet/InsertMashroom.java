@@ -14,7 +14,7 @@ import mashservelet.logic.MashLogic;
 public class InsertMashroom extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException{
-		RequestDispatcher rd = request.getRequestDispatcher("/InsertMashroom.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/InsertMashroom.jsp");
 		rd.forward(request, response);
 
 	}
@@ -36,7 +36,7 @@ public class InsertMashroom extends HttpServlet{
 			String volva = request.getParameter("volva");
 			MashLogic.InsertLogic(name, order, family, adnexed, caulescent, cortex, density, gill, collar, volva);
 
-			RequestDispatcher rd = request.getRequestDispatcher("/result.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/result.jsp");
 			rd.forward(request, response);
 
 	}

@@ -15,18 +15,18 @@ List<Family> f = fdao.findAll();
 <title>科を新しく追加</title>
 </head>
 <body>
-<jsp:include page="/InsertHeaders.jsp" />
+<jsp:include page="/WEB-INF/InsertHeaders.jsp" />
 
 
 
 <h1>きのこ の「科」を新しく追加できます。</h1>
-<form action="/Login/admin/InsertFamily" method="post">
+<form action="<%=request.getContextPath() %>/Login/admin/InsertFamily" method="post">
 <input type="text" name="id"><br>
 <input type="text" name="name"><br>
 <input type= "submit" value="送信">
 </form>
 
-<form action="/Login/admin/DeleteConfirm" method="post">
+<form action="<%=request.getContextPath() %>/Login/admin/DeleteConfirm" method="post">
 <h3>登録されている「科」一覧</h3>
 <table>
 <tr><th>ID</th><th>科名</th><th>削除</th>></tr>

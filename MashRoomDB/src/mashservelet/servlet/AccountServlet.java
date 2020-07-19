@@ -25,7 +25,7 @@ public class AccountServlet extends HttpServlet{
 		List<MashOfAccount> list = AccountLogic.accountMash(account.getId());
 		request.setAttribute("list", list);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/account.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/account.jsp");
 		rd.forward(request, response);
 
 	}

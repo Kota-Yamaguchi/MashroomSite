@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException{
-		RequestDispatcher rd = request.getRequestDispatcher("/top.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/top.jsp");
 		rd.forward(request, response);
 	}
 

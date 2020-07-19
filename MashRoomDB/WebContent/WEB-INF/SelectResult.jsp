@@ -14,7 +14,7 @@ List<Mashroom> mashlist = (List<Mashroom>) request.getAttribute("mashlist");
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/Login/detail" method="post">
+<form action="<%=request.getContextPath() %>/Login/detail" method="post">
 <table>
 
 <% for(int i =0 ; i<mashlist.size();i++){%>
@@ -22,7 +22,7 @@ List<Mashroom> mashlist = (List<Mashroom>) request.getAttribute("mashlist");
 <tr><td><%=mashlist.get(i).getName() %></td>
 <td><button type="submit" name="detail" value=<%=mashlist.get(i).getName() %> >詳細へ</button></td></tr>
 <%} %>
-<a href = "/Login/SelectMash">検索formに戻る</a>
+<a href = "<%=request.getContextPath() %>/Login/SelectMash">検索formに戻る</a>
 </table>
 </form>
 </body>

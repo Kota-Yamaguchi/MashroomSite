@@ -19,7 +19,7 @@ public class DeleteConfirm extends HttpServlet{
 		System.out.println(id);
 		HttpSession session = request.getSession();
 		session.setAttribute("id", id);
-		RequestDispatcher rd = request.getRequestDispatcher("/delete.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/delete.jsp");
 		rd.forward(request, response);
 	}
 

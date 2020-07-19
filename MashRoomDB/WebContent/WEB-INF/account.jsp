@@ -15,13 +15,13 @@ Login account = (Login) session.getAttribute("account");
 </head>
 <body>
 <h1>your account page (<%= account.getName()%>)</h1>
-<a href="/Login/Logout">ログアウトする</a><br>
+<a href="<%=request.getContextPath() %>/Login/Logout">ログアウトする</a><br>
 <%
 if (account.getId().equals("admin") || account.getName().equals("admin")) {
 %>
-<a href="/Login/admin/InsertMash">きのこ を新しく追加する</a>
+<a href="<%=request.getContextPath() %>/Login/admin/InsertMash">きのこ を新しく追加する</a>
 <%} %>
-<a href ="/Login/SelectMash">きのこ を検索する</a><br>
+<a href ="<%=request.getContextPath() %>/Login/SelectMash">きのこ を検索する</a><br>
 今まで検索したきのこ
 <table>
 <tr><th>名前</th></tr>

@@ -20,7 +20,7 @@ public class SelectMashroom extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException{
 		System.out.println("koko");
-		RequestDispatcher rd = request.getRequestDispatcher("/SelectMashroom.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/SelectMashroom.jsp");
 		rd.forward(request, response);
 	}
 
@@ -38,7 +38,7 @@ public class SelectMashroom extends HttpServlet {
 		System.out.println(account);
 		List<Mashroom> mashlist = MashLogic.SelectLogic(account.getId(), adnexed, caulescent, cortex, density, gill, collar, volva);
 		request.setAttribute("mashlist", mashlist);
-		RequestDispatcher rd = request.getRequestDispatcher("/SelectResult.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/SelectResult.jsp");
 		rd.forward(request, response);
 	}
 }

@@ -16,7 +16,7 @@ import mashroom.dao.OrderDao;
 public class InsertOrder extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 		throws IOException,ServletException{
-		RequestDispatcher rd = request.getRequestDispatcher("/InsertOrder.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/InsertOrder.jsp");
 		rd.forward(request, response);
 	}
 
@@ -32,12 +32,12 @@ public class InsertOrder extends HttpServlet{
 		OrderDao ordao = new OrderDao();
 		ordao.InsertOrder(or);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/InsertOrder.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/InsertOrder.jsp");
 		rd.forward(request, response);
 		}catch(IllegalArgumentException e) {
 			Order or = null;
 			request.setAttribute("order", or);
-			RequestDispatcher rd = request.getRequestDispatcher("/InsertOrder.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/InsertOrder.jsp");
 			rd.forward(request, response);
 
 		}

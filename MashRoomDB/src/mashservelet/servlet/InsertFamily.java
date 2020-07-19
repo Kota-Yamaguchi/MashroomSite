@@ -16,7 +16,7 @@ import mashroom.dao.FamilyDao;
 public class InsertFamily extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 		throws IOException, ServletException{
-			RequestDispatcher rd = request.getRequestDispatcher("/InsertFamily.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/InsertFamily.jsp");
 			rd.forward(request, response);
 	}
 
@@ -31,7 +31,7 @@ public class InsertFamily extends HttpServlet {
 		FamilyDao f = new FamilyDao();
 		f.insertFamily(family);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/InsertFamily.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/InsertFamily.jsp");
 		rd.forward(request, response);
 
 

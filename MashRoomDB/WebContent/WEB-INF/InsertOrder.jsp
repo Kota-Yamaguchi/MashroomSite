@@ -15,11 +15,11 @@ List<Order> orlist = od.findAll();
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="/InsertHeaders.jsp" />
+<jsp:include page="/WEB-INF/InsertHeaders.jsp" />
 
 
 <h1>きのこ の「目」を登録できます</h1>
-<form action="/InsertOrder" method="post">
+<form action="<%=request.getContextPath() %>/InsertOrder" method="post">
 <input type="text" name="id"><br>
 <input type="text" name="name"><br>
 <input type= "submit" value="送信">

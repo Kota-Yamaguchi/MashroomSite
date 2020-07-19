@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>登録が完了しました</h1>
-<a href = "/">Loginする</a>
+<a href = "<%=request.getContextPath() %>/">Loginする</a>
 </body>
 </html>

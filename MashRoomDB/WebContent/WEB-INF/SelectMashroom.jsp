@@ -30,9 +30,9 @@ List<Volva> volist = (List<Volva>) application.getAttribute("volist");
 <title>SelectMash</title>
 </head>
 <body>
-<a href = "/Login/account">Your Account</a><br>
+<a href = "<%=request.getContextPath() %>/Login/account">Your Account</a><br>
 <h1>見つけた　きのこ　の特徴を入力してください</h1>
-<form action="/Login/SelectMash" method="post">
+<form action="<%=request.getContextPath() %>/Login/SelectMash" method="post">
 
 <h3>ひだのつき方</h3>:<select name="adnexed">
 <%for (int i=0;i<adlist.size();i++){ %>

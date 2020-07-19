@@ -32,7 +32,7 @@ public class AdminFilter implements Filter {
 			System.out.println("あなたは管理者ですね");
 		}else {
 			System.out.println("フィルターに引っ掛かりました");
-			((HttpServletResponse) response).sendRedirect("/MashRoomDB");
+			((HttpServletResponse) response).sendRedirect(((HttpServletRequest) request).getContextPath()+"/MashRoomDB");
 		}
 
 		chain.doFilter(request, response);

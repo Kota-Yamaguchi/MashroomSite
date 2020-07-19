@@ -13,7 +13,7 @@ import mashservelet.logic.LoginLogic;
 @WebServlet("/resister")
 public class LoginResisterServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-		RequestDispatcher rd = request.getRequestDispatcher("/resister.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/resister.jsp");
 		rd.forward(request, response);
 
 	}
@@ -27,7 +27,7 @@ public class LoginResisterServlet extends HttpServlet{
 
 		LoginLogic.resister(id, name, password);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/resisterFinish.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/resisterFinish.jsp");
 		rd.forward(request, response);
 
 	}

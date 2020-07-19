@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>本当に削除しますか？？</h1>
-<form action="/Login/admin/DeleteFamily" method="post">
+<form action="<%=request.getContextPath() %>/Login/admin/DeleteFamily" method="post">
 <button type="submit" name="which" value=0>はい</button>
 <button type="submit" name="which" value=1>いいえ</button>
 </form>

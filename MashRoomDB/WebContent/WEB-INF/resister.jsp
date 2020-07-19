@@ -9,7 +9,7 @@
 <body>
 <h1>会員の新規登録</h1>
 <h2>ログインIDとパスワードを入力してください</h2>
-<form action="/resister" method="post">
+<form action="<%=request.getContextPath() %>/resister" method="post">
 名前:<input type= "text" name="name">
 id:<input type="text" name = "id">
 password:<input type="password" name = "password">

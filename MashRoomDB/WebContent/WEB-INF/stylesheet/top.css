@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+
+body{
+background:#eeeeee;
+font-family: Meiryo;
+}
+div{
+	background: #ffffff;
+	width: 300px;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #cccccc;
+	margin: 30px auto;
+}
+form{
+background-color: #ffffff;
+padding; 30px 50px;
+}
+form dl dt{
+  width: 165px;
+  padding:10px 0;
+  float:left;
+  clear:both;
+}
+
+form dl dd{
+  padding:10px 0;
+}
